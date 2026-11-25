@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Play a Round | Bible Connections</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=proof-button-match" />
+  </head>
+  <body>
+    <main class="round-page">
+      <header class="teams-header">
+        <a class="teams-brand" href="index.html" aria-label="Bible Connections home">BC</a>
+        <span id="roundMeta">Bible Connections</span>
+        <a class="creator-play-link" href="play.html">All games <span aria-hidden="true">↗</span></a>
+      </header>
+
+      <section class="round-content">
+        <p class="kicker"><span></span> <span id="roundTeam"></span></p>
+        <h1 id="roundTitle">Make the<br /><em>connections.</em></h1>
+        <p class="round-instructions" id="roundInstructions">Select four words that belong together.</p>
+        <div class="solved-groups" id="solvedGroups"></div>
+        <div class="word-grid" id="wordGrid"></div>
+        <div class="round-actions">
+          <button class="text-action" id="shuffleButton" type="button">Shuffle words</button>
+          <button class="play-button submit-words" id="submitButton" type="button" disabled>
+            <span>Submit four words</span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </button>
+        </div>
+        <p class="round-feedback" id="roundFeedback" role="status" aria-live="polite"></p>
+        <form class="connection-form" id="connectionForm" hidden>
+          <label for="connectionAnswer">What connects these words?</label>
+          <div class="connection-answer-row">
+            <input id="connectionAnswer" type="text" autocomplete="off" />
+            <button type="submit">Check connection</button>
+          </div>
+          <p id="connectionTries"></p>
+        </form>
+        <div class="score-editor" id="scoreEditor" hidden>
+          <label for="finalScore">Adjust this round’s points</label>
+          <input id="finalScore" type="number" min="0" step="1" value="0" />
+        </div>
+        <div class="round-finish-actions" id="roundFinishActions" hidden>
+          <button class="play-button verse-proof-button" id="showProofButton" type="button">
+            <span>Show us proof</span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="play-button round-next" id="nextRoundButton" type="button">
+            <span>Back to game choices</span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="play-button end-game-button" id="endGameButton" type="button">
+            <span>End Game</span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </button>
+        </div>
+      </section>
+
+      <footer class="teams-footer">
+        <p>#DudeWe’reGettingTheBandBackTogetherForFriendsgiving2026</p>
+      </footer>
+    </main>
+    <dialog class="verse-dialog proof-dialog" id="proofDialog" aria-labelledby="proofDialogTitle">
+      <div class="verse-dialog-header">
+        <div>
+          <p class="kicker"><span></span> Scripture connections</p>
+          <h2 id="proofDialogTitle">Show us proof</h2>
+        </div>
+        <button class="verse-dialog-close" id="closeProofDialog" type="button" aria-label="Close">×</button>
+      </div>
+      <div class="proof-verses" id="proofVerses"></div>
+    </dialog>
+    <script src="round.js?v=game-verses"></script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Games | Bible Connections</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=game-verses" />
+  </head>
+  <body>
+    <main class="creator-page">
+      <header class="teams-header">
+        <a class="teams-brand" href="index.html" aria-label="Bible Connections home">BC</a>
+        <span>Game Workshop</span>
+        <a class="creator-play-link" href="rules.html?from=create">Go play <span aria-hidden="true">↗</span></a>
+      </header>
+
+      <section class="creator-layout">
+        <div class="creator-intro">
+          <p class="kicker"><span></span> Build your puzzle set</p>
+          <h1>Create<br /><em>a game.</em></h1>
+          <p class="creator-description">Make a Connections-style puzzle with four groups of four words. Your games are saved on this device.</p>
+          <div class="creator-counter"><strong id="savedCount">0</strong><span> games saved</span></div>
+        </div>
+
+        <form class="game-form" id="gameForm">
+          <label class="field-label" for="gameTitle">Game name</label>
+          <input class="text-field" id="gameTitle" maxlength="60" placeholder="e.g. People of the Bible" required />
+          <p class="form-hint">Add four words per group. Words must be unique within this game.</p>
+          <div class="category-fields" id="categoryFields"></div>
+          <p class="form-error" id="formError" role="alert"></p>
+          <button class="play-button save-game-button" id="saveGameButton" type="submit">
+            <span>Save this game</span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </button>
+        </form>
+      </section>
+
+      <section class="saved-games-section">
+        <div class="saved-games-heading">
+          <h2>Your saved games</h2>
+          <a href="rules.html?from=create">Ready to play? <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="saved-games-list" id="savedGamesList">
+          <p class="saved-empty">Your created games will show up here.</p>
+        </div>
+      </section>
+    </main>
+    <dialog class="verse-dialog" id="verseEditorDialog" aria-labelledby="verseEditorTitle">
+      <div class="verse-dialog-header">
+        <div>
+          <p class="kicker"><span></span> Add supporting scripture</p>
+          <h2 id="verseEditorTitle">Add verses</h2>
+        </div>
+        <button class="verse-dialog-close" id="closeVerseEditor" type="button" aria-label="Close">×</button>
+      </div>
+      <form id="verseEditorForm">
+        <div class="verse-editor-entries" id="verseEditorEntries"></div>
+        <p class="verse-dialog-error" id="verseEditorError" role="alert"></p>
+        <button class="verse-add-button" id="addVerseEntry" type="button">+ Add another verse</button>
+        <div class="verse-dialog-actions">
+          <button class="verse-cancel-button" id="cancelVerseEditor" type="button">Cancel</button>
+          <button class="verse-save-button" type="submit">Save verses</button>
+        </div>
+      </form>
+    </dialog>
+    <script src="create.js?v=game-verses"></script>
+  </body>
+</html>

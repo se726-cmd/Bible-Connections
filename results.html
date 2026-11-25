@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Results | Bible Connections</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="results-page">
+      <header class="teams-header">
+        <a class="teams-brand" href="index.html" aria-label="Bible Connections home">BC</a>
+        <span>Final results</span>
+      </header>
+
+      <section class="results-content" aria-live="polite">
+        <p class="kicker"><span></span> Game over</p>
+        <h1 id="resultsTitle">And the winner is...</h1>
+        <p class="winner-announcement" id="winnerAnnouncement"></p>
+        <div class="final-scoreboard" id="finalScoreboard"></div>
+        <a class="play-button results-home-link" href="index.html">
+          <span>Back to home</span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </section>
+
+      <div class="confetti-rain" id="confettiRain" aria-hidden="true"></div>
+      <footer class="teams-footer">
+        <p>#DudeWe’reGettingTheBandBackTogetherForFriendsgiving2026</p>
+      </footer>
+    </main>
+    <script src="results.js"></script>
+  </body>
+</html>

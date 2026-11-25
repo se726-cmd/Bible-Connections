@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choose a Game | Bible Connections</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="choose-game-page">
+      <header class="teams-header">
+        <a class="teams-brand" href="index.html" aria-label="Bible Connections home">BC</a>
+        <span>Choose a game</span>
+        <a class="creator-play-link" href="create.html?verses=1">Game workshop <span aria-hidden="true">↗</span></a>
+      </header>
+
+      <section class="choose-game-content">
+        <p class="kicker" id="gamePickerKicker"><span></span> Your teams are ready</p>
+        <h1>Pick a puzzle<br /><em>and play.</em></h1>
+        <div class="play-team-picker" id="teamPicker"></div>
+        <div class="game-choice-grid" id="gameChoices"></div>
+        <p class="play-empty" id="playEmpty" hidden></p>
+      </section>
+
+      <footer class="teams-footer">
+        <p>#DudeWe’reGettingTheBandBackTogetherForFriendsgiving2026</p>
+      </footer>
+    </main>
+    <script src="play.js?v=coinflip-flow"></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Selection | Bible Connections</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="teams-page">
+      <header class="teams-header">
+        <a class="teams-brand" href="index.html">BC</a>
+        <span>Team Selection</span>
+        <a class="previous-page-button" id="previousPageButton" href="rules.html?from=teams">← Previous page</a>
+      </header>
+
+      <section class="teams-layout">
+        <div class="teams-controls">
+          <p class="kicker"><span></span> Build your teams</p>
+          <h1>Who’s<br /><em>playing?</em></h1>
+
+          <label for="namesInput">Enter names, separated by commas</label>
+          <textarea id="namesInput" rows="5" placeholder="Sarah, James, Mia, Caleb, Nia, Joseph"></textarea>
+
+          <div class="group-control">
+            <label for="groupCount">Number of groups</label>
+            <div class="stepper">
+              <button type="button" id="decreaseGroups" aria-label="Decrease number of groups">−</button>
+              <input id="groupCount" type="number" min="1" max="20" value="2" />
+              <button type="button" id="increaseGroups" aria-label="Increase number of groups">+</button>
+            </div>
+          </div>
+
+          <button class="play-button assign-button" id="assignButton">
+            <span>Assign Groups</span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="play-button continue-button" id="continueButton" type="button" hidden>
+            <span>We're gonna start playing fr now</span>
+            <span class="arrow" aria-hidden="true">↗</span>
+          </button>
+        </div>
+
+        <div class="teams-results">
+          <div class="results-heading">
+            <p>The teams</p>
+            <span id="playerCount">0 players</span>
+          </div>
+          <div class="team-grid" id="teamGrid">
+            <p class="empty-state">Enter your players to get started.</p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="teams-footer">
+        <p>#DudeWe’reGettingTheBandBackTogetherForFriendsgiving2026</p>
+      </footer>
+    </main>
+    <script src="teams.js?v=previous-page"></script>
+  </body>
+</html>

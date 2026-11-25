@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coin Flip | Bible Connections</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="coinflip-page">
+      <header class="teams-header">
+        <a class="teams-brand" href="index.html" aria-label="Bible Connections home">BC</a>
+        <span>Who goes first?</span>
+        <a class="creator-play-link" href="game.html">Back to teams <span aria-hidden="true">↗</span></a>
+      </header>
+
+      <section class="coinflip-content">
+        <p class="kicker"><span></span> Heads or tails</p>
+        <h1>Let’s flip<br /><em>for first.</em></h1>
+        <p class="coinflip-intro" id="coinflipIntro">Choose which team calls the side. Winners advance until one team goes first.</p>
+
+        <div class="match-status" id="matchStatus"></div>
+        <div class="matchup" id="matchup" hidden>
+          <article class="match-team">
+            <span class="match-label">Team A</span>
+            <h2 id="teamAName"></h2>
+            <span class="team-side" id="teamASide"></span>
+          </article>
+          <span class="versus">VS</span>
+          <article class="match-team">
+            <span class="match-label">Team B</span>
+            <h2 id="teamBName"></h2>
+            <span class="team-side" id="teamBSide"></span>
+          </article>
+        </div>
+
+        <div class="coin-controls" id="coinControls" hidden>
+          <label for="callingTeam">Which team chooses the coin side?</label>
+          <select id="callingTeam"></select>
+          <div class="call-side-control">
+            <span>They call:</span>
+            <button type="button" class="side-choice active" data-side="heads">Heads</button>
+            <button type="button" class="side-choice" data-side="tails">Tails</button>
+          </div>
+        </div>
+
+        <div class="coin" id="coin" aria-live="polite">
+          <span id="coinFace">?</span>
+        </div>
+        <p class="flip-result" id="flipResult" aria-live="polite"></p>
+        <button class="play-button flip-button" id="flipButton" type="button">
+          <span>Flip the coin</span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </button>
+        <button class="play-button coin-next-button" id="coinNextButton" type="button" hidden>
+          <span>Next matchup</span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </button>
+        <button class="play-button coin-continue-button" id="coinContinueButton" type="button" hidden>
+          <span>Choose games</span>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </button>
+      </section>
+
+      <footer class="teams-footer">
+        <p>#DudeWe’reGettingTheBandBackTogetherForFriendsgiving2026</p>
+      </footer>
+    </main>
+    <script src="coinflip.js"></script>
+  </body>
+</html>
